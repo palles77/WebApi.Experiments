@@ -8,5 +8,8 @@
 # How to start up
 After compilation press Control + F5 which will take you to Swagger.
 
+# Testing
+Unit tests were run using ReSharper. There are 19 tests overall.
+
 # Last Modified
 2021/05/07
