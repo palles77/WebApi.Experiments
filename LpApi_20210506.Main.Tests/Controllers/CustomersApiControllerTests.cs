@@ -20,6 +20,7 @@ namespace LpApi_20210506.Main.Tests.Controllers
             var dbRepo = new Mock<IDatabaseRepository>();
             var logger = new Mock<ILogger<CustomersApiController>>();
             var config = new Mock<IOptions<GrandParadeConfiguration>>();
+            config.Setup(x => x.Value).Returns(new GrandParadeConfiguration());
             var controller = new CustomersApiController(logger.Object, dbRepo.Object, config.Object);
             dbRepo.Setup(x =>
                 x.GetCustomer(It.IsAny<string>())).Returns<Customer>(null);

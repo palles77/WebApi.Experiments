@@ -27,7 +27,7 @@ namespace LpApi_20210506.DataAccess.Tests
             var validateModel = ValidateModel(customer);
             var result = validateModel
                 .Any(v => v.ErrorMessage != null &&
-                          v.MemberNames.Contains("CustomerNumber") && 
+                          v.MemberNames.Contains("PersonalNumber") && 
                           v.ErrorMessage.Contains(SharedResource.Required));
 
             // Assert
